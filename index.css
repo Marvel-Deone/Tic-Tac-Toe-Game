@@ -1,0 +1,164 @@
+/* section {
+    text-align: center;
+}
+.game--contianer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 50px auto;
+}
+.cell {
+    font-family: cursive;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    font-size: 60px;
+    cursor: pointer;
+} */
+/* .background {
+    background-color: #121818;
+    height: 100vh;
+    padding: 1px;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-blend-mode: color-burn;
+	background-color: rgba(0,0,0, 0.8);
+    overflow-y: hidden;
+}
+
+main {
+    margin-left: 450px;
+    margin-top: 20px;
+    width: 370px;
+    height: 1200px;
+    border-radius: 20px;
+}
+
+.background {
+    background-color: #121818;
+    height: 100vh;
+    padding: 1px;
+}
+#player1 {
+    margin-top: 10px;
+    margin-left: 8px;
+    height: 25px;
+    background-color: black;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 10px;
+}
+#player2 {
+    margin-top: 10px;
+    margin-left: 8px;
+    border-radius: 10px;
+    /* padding: 4px; */
+}
+
+#btn {
+    margin-left: 150px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    background-color: blue;
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+}
+
+#mine {
+    display: none;
+}
+
+#nameplayer {
+    /* margin-left: 500px;  */
+    text-align: center;
+    color: white; 
+    font-size: 20px;
+}
+
+#result {
+    /* margin-left: 500px;  */
+    text-align: center;
+    color: white; 
+    font-size: 20px;
+}
+
+.title {
+    color: white; 
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10%;
+}
+#goodluck {
+    color: white; 
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5%;
+}
+
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.hide {
+    display: none;
+}
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+.cell {
+    border: 1px solid white;
+    background-color: black;
+    color: blanchedalmond;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.playerX {
+    color: #09c372;
+}
+
+.playerO {
+    color: #498af8;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.replaybutton {
+    background-color: #ff3860;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
