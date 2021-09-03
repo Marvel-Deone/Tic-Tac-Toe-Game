@@ -40,14 +40,14 @@
 			<div class="score">
 				<div style="background-color: blue; color: white;" id="scoreone">0</div>
 				<div>-</div>
-				<div  style="background-color: yellow; color: red;" id="scoretwo">0</div>
+				<div  style="background-color: yellow; color: black;" id="scoretwo">0</div>
 			</div>
 			<div style="background-color: violet;" id="secondplayer" class="secondplayer"></div>
 		</div>
 
-		<!-- <div class="replay">
-			<button style="margin-left: 1050px; transform: translateY(-600%);" class="replaybutton" onclick="rePlay()">Re-play</button>	
-		</div> -->
+		<div class="replay">
+			<button id="re-play" class="replaybutton" onclick="rePlay()">Re-play</button>	
+		</div>
 
     </main>
    
@@ -63,7 +63,7 @@
                 check =true;
                 firstplayer.innerHTML =player1.value;
                 secondplayer.innerHTML =player2.value;
-                nameplayer.innerHTML ="Start the game" + " " + player1.value + "{X}";
+                nameplayer.innerHTML ="Start the game" + " " + player1.value + "{O}";
                 result.innerHTML = "Entertain yourself with the game GOODLUCK!!!";
                 first.innerHTML = '';
                 second.innerHTML = '';
@@ -104,7 +104,11 @@
         }
         
         //  IF STATEMENT FOR RE-PLAY BUTTON
-        const rePlay =()=> {
+        const rePlay =()=> { 
+            // if (player1.value ==" " && player2.value ==" ") {
+            //     alert("OU")
+            //     nameplayer.innerHTML = "Click start to start the game";
+            // }
                 first.innerHTML = '';
                 second.innerHTML = '';
                 third.innerHTML = '';
@@ -165,17 +169,17 @@
     // var a = first.innerHTML;
     if ((a=="X" && b=="X" && c=="X") || (d=="X" && g=="X" && h=="X") || (i=="X" && j=="X" && k=="X") || 
     (a=="X" && d=="X" && i=="X") || (b=="X" && g=="X" && j=="X") || (c=="X" && h=="X" && k=="X") || (c=="X" && g=="X" && i=="X") || (a=="X" && g=="X" && k=="X"))  {
-        nameplayer.innerHTML = player1.value + " " + "has won the game. click re-play or end.";
-        result.innerHTML = player2.value +"{O} It will be your turn after re-play";
-        ++scoreone.innerHTML;
+        nameplayer.innerHTML = player2.value + " " + "has won the game. click re-play or end.";
+        result.innerHTML = player1.value +"{O} It will be your turn after re-play";
+        ++scoretwo.innerHTML;
     }
     //  END OF IF STATEMENT FOR WINNING LETTER {X}
 
         // IF STATEMENT FOR WINNING LETTER {O}
     if ((a=="O" && b=="O" && c=="O") || (d=="O" && g=="O" && h=="O") || (i=="O" && j=="O" && k=="O") || 
     (a=="O" && d=="O" && i=="O") || (b=="O" && g=="O" && j=="O") || (c=="O" && h=="O" && k=="O") || (c=="O" && g=="O" && i=="O") || (a=="O" && g=="O" && k=="O"))  {
-        nameplayer.innerHTML = player2.value + " " + "has won the game. click re-play or end.";
-        result.innerHTML = player1.value +"{X} It will be your turn after re-play";
+        nameplayer.innerHTML = player1.value + " " + "has won the game. click re-play or end.";
+        result.innerHTML = player2.value +"{X} It will be your turn after re-play";
         ++scoreone.innerHTML;
         
     }
