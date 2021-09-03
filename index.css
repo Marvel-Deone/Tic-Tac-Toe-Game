@@ -31,7 +31,7 @@
 body {
     background-blend-mode: color-burn;
 	background-color: rgba(0,0,0, 0.8);
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 main {
@@ -40,6 +40,9 @@ main {
     width: 370px;
     height: 1200px;
     border-radius: 20px;
+}
+.overall {
+    margin-top: -35px;
 }
 
 .background {
@@ -50,18 +53,22 @@ main {
 #player1 {
     margin-top: 10px;
     margin-left: 8px;
-    height: 25px;
+    height: 30px;
     background-color: black;
     border: 1px solid white;
     text-align: center;
     border-radius: 10px;
     color: white;
 }
+::placeholder {
+    text-align: center;
+    color: white;
+}
 #player2 {
     margin-top: 10px;
     margin-left: 8px;
     border-radius: 10px;
-    height: 25px;
+    height: 30px;
     background-color: black;
     border: 1px solid white;
     color: white;
@@ -76,15 +83,16 @@ main {
 }
 
 #btn {
-    margin-left: 150px;
+    margin-left: 14px;
     margin-top: 8px;
     margin-bottom: 15px;
-    background-color: blue;
+    background-color: green;
     border: none;
+    border-radius: 50px;
     color: white;
-    font-size: 20px;
-    width: 70px;
-    height: 30px;
+    font-size: 15px;
+    width: 80px;
+    height: 35px;
 }
 
 #mine {
@@ -136,25 +144,33 @@ main {
     max-width: 300px;
 }
 .cell {
-    border: 1px solid white;
-    background-color: black;
-    color: blanchedalmond;
+    /* border: 1px solid white; */
+    /* background-color: black; */
+    /* color: blanchedalmond; */
     min-width: 100px;
     min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    /* font-size: 50px; */
     cursor: pointer;
+    background-color: rgba(0,0,0, 0.7);
+	border-right: 3px inset silver;
+	border-bottom: 3px inset silver;
+	color: green;
+	font-size: 40pt;
+	padding: 10px;
+	text-align: center;
+	border-radius: 30px;
 }
 
-.playerX {
+/* .playerX {
     color: #09c372;
-}
+} */
 
-.playerO {
+/* .playerO {
     color: #498af8;
-}
+} */
 
 .controls {
     display: flex;
@@ -163,18 +179,73 @@ main {
     align-items: center;
     margin-top: 1em;
 }
-#scoreone {
-    border-radius: 50px;
-    width: 200px;
-}
+.scoreboard {
+        width: 90%;
+        margin-top: -10px;
+		margin: 10px auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 
-.replaybutton {
-    background-color: #ff3860;
-    color: white;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    font-size: 20px;
-    margin-left: 1em;
-    cursor: pointer;
-}
+    .firstplayer {
+		height: 50px;
+		width: 30%;
+		color: white;
+		font-size: 20pt;
+		text-align: center;
+		padding: 15px;
+	}
+
+	.score {
+		background-color: rgba(0,0,0, 0.6);
+		height: 50px;
+		width: 50%;
+		border-radius: 50px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		border-top: 2px solid silver;
+		box-shadow: 2px 6px 5px 0 rgba(255, 255, 255, 0.5);	
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+    .score div {
+		text-align: center;
+		font-size: 30pt;
+		color: white;
+	}
+
+	.secondplayer {
+		height: 50px;
+		width: 30%;
+		color: white;
+		font-size: 20pt;
+		text-align: center;
+		padding: 15px;
+	}
+    #scoreone {
+        border-radius: 50px;
+        width: 200px;
+        margin-left: -8px;
+    }
+    #scoretwo {
+        border-radius: 50px;
+        width: 200px;
+    }
+
+    .replaybutton {
+        background-color: green;
+        color: white;
+        /* margin-top: -650px !important; */
+        transform: translateY(-60%) !important;
+        padding: 8px;
+        border-radius: 50px;
+        border: none;
+        font-size: 15px;
+        width: 100px;
+        /* transform: translateX(-36%); */
+        margin-left: 140px !important;
+        cursor: pointer;
+    }
